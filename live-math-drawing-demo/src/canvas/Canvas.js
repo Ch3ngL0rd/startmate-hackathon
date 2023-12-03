@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useCanvas } from "./CanvasContext";
-import { ClearCanvasButton, LatexRenderer, UndoButton, RedoButton, CopyToClipboardButton, SubmitAnswer } from './Utils'
+import { ClearCanvasButton, LatexRenderer, UndoButton, RedoButton, SubmitAnswer } from './Utils'
 import './canvas.css'
 
 function CanvasInternal() {
@@ -34,7 +34,7 @@ export function Canvas() {
         <ClearCanvasButton />
         <UndoButton />
         <RedoButton />
-        <CopyToClipboardButton />
+      
       </div>
       <CanvasInternal />
       <div style={{ position: "absolute", bottom: 0, right: 0, paddingRight: "1em", paddingBottom: "1me" }}>

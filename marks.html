@@ -1,0 +1,86 @@
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<div
+    class="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-800">
+    <div
+        class="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-md"
+        data-v0-t="card">
+        <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="tracking-tight text-lg font-semibold">Question x Feedback</h3>
+            <p>2x + 4 = 0 (solve for x)</p>
+
+        </div>
+        <div class="p-6 divide-y divide-gray-200">
+            <div class="py-2">
+                <div class="flex items-center justify-between">
+                    <div class="text-sm font-medium">Part 1</div>
+                    <div
+                        class="bg-green-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm">
+                        Correct
+                    </div>
+                </div>
+                <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    Your first step was subtracting 4 from both sides, which is
+                    correct.
+                </div>
+            </div>
+            <div class="py-2">
+                <div class="flex items-center justify-between">
+                    <div class="text-sm font-medium">Part 2</div>
+                    <div
+                        class="bg-red-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm">
+                        Incorrect
+                    </div>
+                </div>
+                <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    You then divided both sides by negative 2 which is
+                    incorrect, you should divide both sides by 2
+                </div>
+            </div>
+            <div class="py-2">
+                <div class="flex items-center justify-between">
+                    <div class="text-sm font-medium">Part 3</div>
+                    <div
+                        class="bg-green-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm">
+                        Correct
+                    </div>
+                </div>
+                <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    Following on from your previous step you solved for x, this
+                    is correct
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex items-center justify-between p-4">
+                <div class="text-sm font-medium">Total</div>
+                <div class="text-sm font-medium">2/3</div>
+            </div>
+        </div>
+        <div class="flex items-center p-4 flex flex-col">
+            <div class="font-medium">Advice for next time</div>
+            <div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">
+                    You should divide both sides by 2 instead of -2. You don't
+                    need to change the sign when dividing or multiplying
+                    algebraic expressions.
+                </div>
+
+            </div>
+        </div>
+
+        <div class="p-4">
+            <button
+                class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full">
+                Next Question
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    console.log("testing")
+</script>
