@@ -1,0 +1,43 @@
+.canvas-container {
+    border-top: 2px solid gray;
+    display: block;
+}
+
+.canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    touch-action: none;
+}
+
+.latex-renderer-container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #F2F2F5;
+    height: 19vh;
+    font-size: 35px;
+}
+
+.canvas-buttons-container {
+    display: inline-flex;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+body{
+    user-select: none;
+}
+
+.canvas-buttons {
+    font-size: 30px;
+}
+
+
+.submit-button:hover {
+    background-color: #BBDEFB; /* Lighter shade for hover */
+    cursor: pointer;
+  }
