@@ -26,6 +26,9 @@ export const LatexRenderer = () => {
   return (
     <div className='latex-renderer-container'>
       <MathpixLoader >
+        <div>
+          <p>Question: 2x + 4 = 0 (solve for x)</p>
+        </div>
         <MathpixMarkdown text={latex.code} />
       </MathpixLoader>
     </div>
