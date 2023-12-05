@@ -84,7 +84,7 @@
             <div
               class="flex flex-row justify-start items-center w-full space-x-4 hover:shadow-lg"
             >
-              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil]">
+              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil] w-[8rem]">
                 2x = -4
               </div>
 
@@ -108,7 +108,7 @@
             <div
               class="flex flex-row justify-start items-center w-full space-x-4 hover:shadow-lg"
             >
-              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil]">
+              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil] w-[8rem]">
                 x = -4/2
               </div>
 
@@ -133,7 +133,7 @@
             <div
               class="flex flex-row justify-start items-center w-full space-x-4 hover:shadow-lg"
             >
-              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil]">
+              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil] w-[8rem]">
                 x = -2
               </div>
 
