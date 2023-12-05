@@ -36,11 +36,8 @@ export const LatexRenderer = () => {
   return (
     <div
       className="latex-renderer-container"
-      style={{ display: "flex", flexDirection: "column" }}
     >
-      <div>
-        <p>Question: 2x + 4 = 0 (solve for x)</p>
-      </div>
+
       <MathpixLoader>
         <MathpixMarkdown text={latex.code} />
       </MathpixLoader>
@@ -93,7 +90,7 @@ export const RedoButton = () => {
 
 export const SubmitAnswer = () => {
   const handleClick = () => {
-    alert("Submit Answer");
+    console.log("submitting");
   };
 
   return (
@@ -118,3 +115,13 @@ export const SubmitAnswer = () => {
     </Tooltip>
   );
 };
+
+export const loading = () =>{
+  return(
+   <> 
+    <div>
+    <p>loading</p>
+    </div>
+  </> 
+  )
+}
