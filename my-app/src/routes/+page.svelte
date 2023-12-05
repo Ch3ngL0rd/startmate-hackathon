@@ -64,19 +64,29 @@
 
     <div class="flex flex-col items-center justify-center h-screen">
       <div
-        class="bg-gray-100 dark:bg-gray-800 rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-6xl hover:shadow"
+        class="bg-gray-100 dark:bg-gray-800 rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-6xl hover:shadow relative"
         data-v0-t="card"
       >
-        <div class=" hover:bg-gray-400 px-2 py-2">Feedback</div>
+        <div
+          class=" hover:bg-gray-400 px-4 py-1 absolute left-0 border border-black rounded m-4 text-sm"
+          id="fuck"
+        >
+          Feedback
+        </div>
+
         <div class="flex flex-col space-y-1.5 p-6">
-          <p class="flex flex-row justify-center text-slate-600 font-[Virgil]">2x + 4 = 0 (solve for x)</p>
+          <p class="flex flex-row justify-center text-slate-600 font-[Virgil]">
+            2x + 4 = 0 (solve for x)
+          </p>
         </div>
         <div class="p-6 divide-y divide-gray-200">
           <div transition:slide class="transition duration-300 ease-in-out">
             <div
               class="flex flex-row justify-start items-center w-full space-x-4 hover:shadow-lg"
             >
-              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil]">2x = -4</div>
+              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil]">
+                2x = -4
+              </div>
 
               <div class="py-2 rounded px-4 flex-grow">
                 <div class="flex items-center justify-between">
@@ -98,7 +108,9 @@
             <div
               class="flex flex-row justify-start items-center w-full space-x-4 hover:shadow-lg"
             >
-              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil]">x = -4/2</div>
+              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil]">
+                x = -4/2
+              </div>
 
               <div class="py-2 rounded px-4 flex-grow">
                 <div class="flex items-center justify-between">
@@ -121,7 +133,9 @@
             <div
               class="flex flex-row justify-start items-center w-full space-x-4 hover:shadow-lg"
             >
-              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil]">x = -2</div>
+              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil]">
+                x = -2
+              </div>
 
               <div class="py-2 rounded px-4 flex-grow">
                 <div class="flex items-center justify-between">
@@ -144,7 +158,9 @@
         <div class="flex items-center p-4 flex-col">
           <div class="font-medium">Advice for next time</div>
           <div>
-            <div class="text-sm text-gray-500 dark:text-gray-400 justify-center px-20">
+            <div
+              class="text-sm text-gray-500 dark:text-gray-400 justify-center px-20"
+            >
               You should divide both sides by 2 instead of -2. You don't need to
               change the sign when dividing or multiplying algebraic
               expressions.
@@ -158,25 +174,23 @@
             <div class="text-sm font-bold">2/3</div>
           </div>
         </div>
+      </div>
+      <div
+        class="flex flex-row justify-center items-center space-x-4 mt-10 gap-20"
+      >
+        <div class="bg-orange-200 rounded-xl shadow-inner px-5 py-5 text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-400 font-semibold" id="cunt">
+          Try again
+        </div>
 
-        <div class="p-4">
-          <button
-            class="hover:bg-slate-700 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
-          >
-            Next Question
-          </button>
+        <div class="bg-orange-600 rounded-xl px-5 py-5 shadow-lg text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-800 font-semibold" id="cunt">
+          Next Question
         </div>
       </div>
     </div>
-    
-
-
   {/if}
 </body>
 
 <style>
-
-  
   body {
     background-image: url("../images/grid.jpg");
     background-size: cover;
@@ -220,11 +234,20 @@
     }
   }
 
-  p{
+  p {
     font-size: 2rem;
   }
 
-  div{
+  div {
     font-size: 1rem;
+  }
+  #fuck {
+    font-size: 0.8rem;
+  }
+
+  #cunt {
+    box-shadow:
+      4px 4px 4px rgba(0, 0, 0, 0.25),
+      inset 2px 4px 4px #f6a963;
   }
 </style>
