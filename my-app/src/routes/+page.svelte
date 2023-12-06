@@ -3,6 +3,10 @@
 
   import { slide } from "svelte/transition";
   import grid from "../images/grid.jpg";
+  import { fade } from "svelte/transition";
+  let isVisible1 = false;
+  let isVisible2 = false;
+  let isVisible3 = false;
 
   // You can adjust the parameters to control the animation
 
@@ -11,6 +15,22 @@
     // wait 2 seconds
     // await new Promise((r) => setTimeout(r, 2000));
     loading = false;
+    setTimeout(() => {
+      isVisible1 = true;
+    }, 2000);
+    setTimeout(() => {
+      isVisible2 = true;
+      let thing = document.getElementById("fuckcunt2");
+      thing.classList.remove("hidden");
+      thing.classList.add("typewriter");
+    }, 3000);
+    setTimeout(() => {
+      isVisible3 = true;
+
+      let thing2 = document.getElementById("fuckcunt3");
+      thing2.classList.remove("hidden");
+      thing2.classList.add("typewriter");
+    }, 5000);
   });
 </script>
 
@@ -84,18 +104,24 @@
             <div
               class="flex flex-row justify-start items-center w-full space-x-4 hover:shadow-lg"
             >
-              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil] w-[8rem]">
+              <div
+                class="ml-4 px-6 text-orange-500 font-bold font-[Virgil] w-[8rem]"
+              >
                 2x = -4
               </div>
 
               <div class="py-2 rounded px-4 flex-grow">
                 <div class="flex items-center justify-between">
                   <div class="text-sm font-medium">Part 1</div>
-                  <div
-                    class=" border-green-600 text-green-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm"
-                  >
-                    Correct
-                  </div>
+                  {#if isVisible1}
+                    <div transition:fade>
+                      <div
+                        class="typerwriter border-green-600 text-green-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm"
+                      >
+                        Correct
+                      </div>
+                    </div>
+                  {/if}
                 </div>
                 <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
                   Your first step was subtracting 4 from both sides, which is
@@ -108,20 +134,29 @@
             <div
               class="flex flex-row justify-start items-center w-full space-x-4 hover:shadow-lg"
             >
-              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil] w-[8rem]">
+              <div
+                class="ml-4 px-6 text-orange-500 font-bold font-[Virgil] w-[8rem]"
+              >
                 x = -4/2
               </div>
 
               <div class="py-2 rounded px-4 flex-grow">
                 <div class="flex items-center justify-between">
                   <div class="text-sm font-medium">Part 2</div>
-                  <div
-                    class="border-red-600 text-red-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm"
-                  >
-                    Incorrect
-                  </div>
+                  {#if isVisible2}
+                    <div transition:fade>
+                      <div
+                        class="border-red-600 text-red-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm"
+                      >
+                        Incorrect
+                      </div>
+                    </div>
+                  {/if}
                 </div>
-                <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                <div
+                  id="fuckcunt2"
+                  class=" hidden mt-1 text-sm text-gray-500 dark:text-gray-400"
+                >
                   You then divided both sides by negative 2 which is incorrect,
                   you should divide both sides by 2
                 </div>
@@ -133,20 +168,29 @@
             <div
               class="flex flex-row justify-start items-center w-full space-x-4 hover:shadow-lg"
             >
-              <div class="ml-4 px-6 text-orange-500 font-bold font-[Virgil] w-[8rem]">
+              <div
+                class="ml-4 px-6 text-orange-500 font-bold font-[Virgil] w-[8rem]"
+              >
                 x = -2
               </div>
 
               <div class="py-2 rounded px-4 flex-grow">
                 <div class="flex items-center justify-between">
                   <div class="text-sm font-medium">Part 3</div>
-                  <div
-                    class=" border-green-600 text-green-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm"
-                  >
-                    Correct
-                  </div>
+                  {#if isVisible3}
+                    <div transition:fade>
+                      <div
+                        class="border-green-600 text-green-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm"
+                      >
+                        Correct
+                      </div>
+                    </div>
+                  {/if}
                 </div>
-                <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                <div
+                  id="fuckcunt3"
+                  class="hidden mt-1 text-sm text-gray-500 dark:text-gray-400"
+                >
                   Following on from your previous step you solved for x, this is
                   correct
                 </div>
@@ -159,7 +203,7 @@
           <div class="font-medium">Advice for next time</div>
           <div>
             <div
-              class="text-sm text-gray-500 dark:text-gray-400 justify-center px-20"
+              class="hidden text-sm text-gray-500 dark:text-gray-400 justify-center px-20"
             >
               You should divide both sides by 2 instead of -2. You don't need to
               change the sign when dividing or multiplying algebraic
@@ -178,11 +222,17 @@
       <div
         class="flex flex-row justify-center items-center space-x-4 mt-10 gap-20"
       >
-        <div class="bg-orange-200 rounded-xl shadow-inner px-5 py-5 text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-400 font-semibold" id="cunt">
+        <div
+          class="bg-orange-200 rounded-xl shadow-inner px-5 py-5 text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-400 font-semibold"
+          id="cunt"
+        >
           Try again
         </div>
 
-        <div class="bg-orange-600 rounded-xl px-5 py-5 shadow-lg text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-800 font-semibold" id="cunt">
+        <div
+          class="bg-orange-600 rounded-xl px-5 py-5 shadow-lg text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-800 font-semibold"
+          id="cunt"
+        >
           Next Question
         </div>
       </div>
@@ -249,5 +299,35 @@
     box-shadow:
       4px 4px 4px rgba(0, 0, 0, 0.25),
       inset 2px 4px 4px #f6a963;
+  }
+
+  .typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret 0.75s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
   }
 </style>

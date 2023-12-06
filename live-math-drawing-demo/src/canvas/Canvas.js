@@ -41,7 +41,7 @@ export function Canvas() {
     return <h1>YO YO YO</h1>;
   } else {
     return (
-      <>
+      <>  
         <div style={{ background: "#f2f2f5" }}>
           <div
             style={{
@@ -67,7 +67,7 @@ export function Canvas() {
             right: 0,
             paddingRight: "1em",
             paddingBottom: "1me",
-          }}
+          }}  
         >
 
           {/* shit goes here */}

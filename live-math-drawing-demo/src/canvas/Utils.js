@@ -97,7 +97,7 @@ export const SubmitAnswer = () => {
     <Tooltip title="Submit Answer">
       <IconButton
         onClick={handleClick}
-        style={{ backgroundColor: "#E3F2FD", borderRadius: "4px" }}
+        style={{ backgroundColor: "#fff", borderRadius: "4px", border: "3px solid #FFA500" }}
         className="submit-button"
       >
         <div
@@ -105,11 +105,11 @@ export const SubmitAnswer = () => {
           style={{ display: "flex", alignItems: "center", padding: "5px" }}
         >
           <span
-            style={{ marginRight: "5px", fontWeight: "bold", color: "#1976D2", fontSize: "1.2rem" }}
+            style={{ marginRight: "5px", fontWeight: "bold", color: "#FFA500", fontSize: "1.2rem" }}
           >
             SUBMIT ANSWER
           </span>
-          <Send style={{ color: "#1976D2" }} fontSize="inherit" />
+          <Send style={{ color: "#FFA500" }} fontSize="inherit" />
         </div>
       </IconButton>
     </Tooltip>
