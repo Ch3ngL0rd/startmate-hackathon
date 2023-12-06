@@ -13,24 +13,30 @@
   let loading = true;
   onMount(async () => {
     // wait 2 seconds
-    // await new Promise((r) => setTimeout(r, 2000));
+    await new Promise((r) => setTimeout(r, 2000));
     loading = false;
-    setTimeout(() => {
-      isVisible1 = true;
-    }, 2000);
-    setTimeout(() => {
-      isVisible2 = true;
+    await new Promise((r) => setTimeout(r, 2000));
+
+    isVisible1 = true;
+    await new Promise((r) => setTimeout(r, 2000));
+
       let thing = document.getElementById("fuckcunt2");
       thing.classList.remove("hidden");
-      thing.classList.add("typewriter");
-    }, 3000);
-    setTimeout(() => {
-      isVisible3 = true;
+      thing.id = "typewriter"
+      await new Promise((r) => setTimeout(r, 2000));
+
+      isVisible2 = true;
+
+
+      await new Promise((r) => setTimeout(r, 2000));
 
       let thing2 = document.getElementById("fuckcunt3");
       thing2.classList.remove("hidden");
-      thing2.classList.add("typewriter");
-    }, 5000);
+      thing2.id = "typewriter"
+      await new Promise((r) => setTimeout(r, 2000));
+
+      isVisible3 = true;
+
   });
 </script>
 
@@ -123,7 +129,7 @@
                     </div>
                   {/if}
                 </div>
-                <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                <div id="typewriter" class="mt-1 text-sm text-gray-500 dark:text-gray-400">
                   Your first step was subtracting 4 from both sides, which is
                   correct.
                 </div>
@@ -301,7 +307,7 @@
       inset 2px 4px 4px #f6a963;
   }
 
-  .typewriter {
+  #typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
