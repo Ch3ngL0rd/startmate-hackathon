@@ -14,29 +14,26 @@
   onMount(async () => {
     // wait 2 seconds
     await new Promise((r) => setTimeout(r, 2000));
+    // stops loading
     loading = false;
+    // starts text streaming
     await new Promise((r) => setTimeout(r, 2000));
-
+    // first button comes
     isVisible1 = true;
+    // start second text streaming
+    let thing = document.getElementById("fuckcunt2");
+    thing.classList.remove("hidden");
+    thing.id = "typewriter";
     await new Promise((r) => setTimeout(r, 2000));
 
-      let thing = document.getElementById("fuckcunt2");
-      thing.classList.remove("hidden");
-      thing.id = "typewriter"
-      await new Promise((r) => setTimeout(r, 2000));
+    isVisible2 = true;
 
-      isVisible2 = true;
+    let thing2 = document.getElementById("fuckcunt3");
+    thing2.classList.remove("hidden");
+    thing2.id = "typewriter";
+    await new Promise((r) => setTimeout(r, 2000));
 
-
-      await new Promise((r) => setTimeout(r, 2000));
-
-      let thing2 = document.getElementById("fuckcunt3");
-      thing2.classList.remove("hidden");
-      thing2.id = "typewriter"
-      await new Promise((r) => setTimeout(r, 2000));
-
-      isVisible3 = true;
-
+    isVisible3 = true;
   });
 </script>
 
@@ -56,7 +53,6 @@
         width="47"
         height="50"
         viewBox="0 0 47 50"
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
         class="hover:text-black w-10 h-10"
       >
@@ -83,7 +79,7 @@
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M419.747 51.149C387.543 18.394 342.097 0.333344 289.067 0.333344C236.037 0.333344 190.591 18.394 158.389 51.149C126.212 83.8787 108.548 129.964 108.548 183.667C108.548 255.967 140.027 302.567 178.987 330.54C186.558 335.973 194.383 340.69 202.277 344.757C158.738 356.72 123.386 377.577 94.6031 403.447C49.0907 444.35 20.8824 496.977 1.87773 544.1C-1.56494 552.637 2.5644 562.347 11.1014 565.79C19.6381 569.233 29.3491 565.103 32.7917 556.567C50.8807 511.713 76.7154 464.34 116.884 428.237C156.65 392.5 211.336 367 289.067 367C361.733 367 414.193 389.283 453.133 421.263C492.4 453.51 518.843 496.387 537.79 538.773C550.43 567.053 528.247 600.333 493.423 600.333H108.829C99.6247 600.333 92.1627 607.797 92.1627 617C92.1627 626.203 99.6247 633.667 108.829 633.667H493.423C548.493 633.667 592.263 578.96 568.223 525.173C548.107 480.173 519.013 432.23 474.29 395.503C447.743 373.703 416.01 356.123 378.01 345.357C398.333 334.12 415.04 319.207 428.333 302.303C457.097 265.733 469.587 220.339 469.587 183.667C469.587 129.964 451.923 83.8787 419.747 51.149ZM395.977 74.5177C421.147 100.121 436.253 137.37 436.253 183.667C436.253 213.661 425.803 251.6 402.133 281.697C378.917 311.217 342.69 333.667 289.067 333.667C267.38 333.667 229.963 326.103 198.428 303.46C167.75 281.433 141.881 244.701 141.881 183.667C141.881 137.37 156.988 100.121 182.159 74.5177C207.305 48.9393 243.783 33.6667 289.067 33.6667C334.35 33.6667 370.83 48.9393 395.977 74.5177Z"
-          fill="black"
+          fill="#959595"
         />
       </svg>
     </div>
@@ -122,6 +118,8 @@
                   {#if isVisible1}
                     <div transition:fade>
                       <div
+                      id="fucking-button-shadow"
+
                         class="typerwriter border-green-600 text-green-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm"
                       >
                         Correct
@@ -129,7 +127,10 @@
                     </div>
                   {/if}
                 </div>
-                <div id="typewriter" class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                <div
+                  id="typewriter"
+                  class="mt-1 text-sm text-gray-500 dark:text-gray-400"
+                >
                   Your first step was subtracting 4 from both sides, which is
                   correct.
                 </div>
@@ -152,6 +153,7 @@
                   {#if isVisible2}
                     <div transition:fade>
                       <div
+                      id="fucking-button-shadow"
                         class="border-red-600 text-red-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm"
                       >
                         Incorrect
@@ -186,6 +188,7 @@
                   {#if isVisible3}
                     <div transition:fade>
                       <div
+                      id="fucking-button-shadow"
                         class="border-green-600 text-green-600 inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-sm"
                       >
                         Correct
@@ -206,10 +209,11 @@
         </div>
 
         <div class="flex items-center p-4 flex-col">
+          
           <div class="font-medium">Advice for next time</div>
           <div>
             <div
-              class="hidden text-sm text-gray-500 dark:text-gray-400 justify-center px-20"
+              class="text-sm text-gray-500 dark:text-gray-400 justify-center px-20"
             >
               You should divide both sides by 2 instead of -2. You don't need to
               change the sign when dividing or multiplying algebraic
@@ -229,14 +233,14 @@
         class="flex flex-row justify-center items-center space-x-4 mt-10 gap-20"
       >
         <div
-          class="bg-orange-200 rounded-xl shadow-inner px-5 py-5 text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-400 font-semibold"
-          id="cunt"
+          class="bg-[#feebda] rounded-xl shadow-inner px-5 py-5 text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-400 font-semibold text-[#c96c16]"
+          id="cunt1"
         >
           Try again
         </div>
 
         <div
-          class="bg-orange-600 rounded-xl px-5 py-5 shadow-lg text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-800 font-semibold"
+          class=" bg-[#de6e00] rounded-xl px-5 py-5 shadow-lg text-center w-[9.5rem] hover:-translate-y-2 hover:bg-orange-800 font-semibold text-white"
           id="cunt"
         >
           Next Question
@@ -307,12 +311,18 @@
       inset 2px 4px 4px #f6a963;
   }
 
+  #cunt1{
+    box-shadow:
+    4px 4px 4px rgba(0, 0, 0, 0.25),
+      inset 2px 4px 4px #eec7a3;
+  }
+
   #typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     animation:
-      typing 3.5s steps(40, end),
+      typing 2s steps(40, end),
       blink-caret 0.75s step-end infinite;
   }
 
@@ -335,5 +345,10 @@
     50% {
       border-color: orange;
     }
+  }
+
+
+  #fucking-button-shadow{
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
   }
 </style>
