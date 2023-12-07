@@ -1,9 +1,20 @@
+/* include font file  */
+@font-face {
+    font-family: 'Virgil';
+    src: 
+         url('../Virgil.woff2') format('woff2')
+  
+  }
+
+
+
 .canvas-container {
     border-top: 2px solid gray;
     display: block;
 }
 
 .canvas {
+
     padding: 0;
     margin: auto;
     display: block;
@@ -17,8 +28,9 @@
     justify-content: center;
     text-align: center;
     background-color: #F2F2F5;
-    height: 19vh;
+    height: 24vh;
     font-size: 35px;
+
 }
 
 .canvas-buttons-container {
@@ -26,10 +38,12 @@
     float: left;
     margin-top: 10px;
     margin-bottom: 3px;
+
 }
 
 body{
     user-select: none;
+    font-family: 'Virgil', sans-serif;
 }
 
 .canvas-buttons {

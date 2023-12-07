@@ -38,7 +38,6 @@ export const LatexRenderer = () => {
     <div
       className="latex-renderer-container"
     >
-
       <MathpixLoader>
         <MathpixMarkdown text={latex.code} />
       </MathpixLoader>

@@ -50,7 +50,8 @@ export function Canvas() {
               fontSize: "24px",
             }}
           >
-            <p>Question: 2x + 4 = 0 (solve for x)</p>
+            <p>Question 1</p>
+            <p>2x + 4 = 0 (solve for x)</p>
           </div>
           <LatexRenderer />
         </div>

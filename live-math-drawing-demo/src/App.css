@@ -1,5 +1,14 @@
+/* include font file  */
+@font-face {
+  font-family: 'Virgil';
+  src: 
+       url('./Virgil.woff2') format('woff2')
+
+}
+
 .App {
   text-align: center;
+  font-family: 'Virgil', sans-serif;
 }
 
 .App-logo {
