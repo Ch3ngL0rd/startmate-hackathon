@@ -21,7 +21,8 @@ export const ClearCanvasButton = () => {
       <IconButton
         onClick={handleClick}
         disabled={strokes.length === 0}
-        color="primary"
+        style={{ color: "#FFA500" }}
+
       >
         <div className="canvas-buttons">
           <DeleteOutline fontSize="inherit" />
@@ -56,7 +57,8 @@ export const UndoButton = () => {
       <IconButton
         onClick={handleClick}
         disabled={undoHistory.length === 0}
-        color="primary"
+        style={{ color: "#FFA500" }}
+
       >
         <div className="canvas-buttons">
           <UndoOutlined fontSize="inherit" />
@@ -77,7 +79,8 @@ export const RedoButton = () => {
       <IconButton
         onClick={handleClick}
         disabled={redoHistory.length === 0}
-        color="primary"
+        style={{ color: "#FFA500" }}
+
       >
         <div className="canvas-buttons">
           <RedoOutlined fontSize="inherit" />

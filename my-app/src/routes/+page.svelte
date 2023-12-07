@@ -7,6 +7,8 @@
   let isVisible1 = false;
   let isVisible2 = false;
   let isVisible3 = false;
+  let showAdvice = false;
+  let showTotal = false;
 
   // You can adjust the parameters to control the animation
 
@@ -34,6 +36,9 @@
     await new Promise((r) => setTimeout(r, 2000));
 
     isVisible3 = true;
+
+    showAdvice = true;
+    showTotal = true;
   });
 </script>
 
@@ -129,7 +134,7 @@
                 </div>
                 <div
                   id="typewriter"
-                  class="mt-1 text-sm text-gray-500 dark:text-gray-400"
+                  class="mt-1 text-sm text-gray-500 dark:text-gray-400 "
                 >
                   Your first step was subtracting 4 from both sides, which is
                   correct.
@@ -207,7 +212,7 @@
             </div>
           </div>
         </div>
-
+        {#if showAdvice}
         <div class="flex items-center p-4 flex-col">
           
           <div class="font-medium">Advice for next time</div>
@@ -221,13 +226,16 @@
             </div>
           </div>
         </div>
-
+        {/if}
+        {#if showTotal}
         <div>
           <div class="flex items-center flex-row justify-center space-x-6 p-4">
             <div class="text-sm font-bold">Total</div>
             <div class="text-sm font-bold">2/3</div>
           </div>
         </div>
+        {/if}
+
       </div>
       <div
         class="flex flex-row justify-center items-center space-x-4 mt-10 gap-20"
@@ -293,7 +301,6 @@
       transform: rotate(360deg);
     }
   }
-
   p {
     font-size: 2rem;
   }
